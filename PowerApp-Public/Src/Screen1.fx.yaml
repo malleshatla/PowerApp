@@ -1,0 +1,206 @@
+Screen1 As screen:
+    OnVisible: |-
+        =//Set(varOpn, true );Set(varonload, true );
+        UpdateContext({locShowPopupDelete: false ,locRecordPopupDelete:Blank(),gallerySelected:false})
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Items: ='User Test'
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =UpdateContext({locRecordPopupDelete:ThisItem,gallerySelected:true})
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =1352.00
+        X: =3.00
+        Y: =40
+        ZIndex: =1
+
+        Container2 As groupContainer.horizontalAutoLayoutContainer:
+            Height: =104
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =10
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =900.00
+            X: =0.00
+            ZIndex: =1
+
+            Label1 As label:
+                PaddingRight: =5.00
+                PaddingTop: =5.00
+                Size: =13.00
+                Text: =ThisItem.Title
+                Width: =150.00
+                X: =0.00
+                ZIndex: =1
+
+            Toggle2 As toggleSwitch:
+                Default: =ThisItem.Enabled
+                OnChange: |-
+                    =UpdateContext({
+                        locShowPopupDelete: !locShowPopupDelete,
+                    
+                        // stores which record was selected for deletion
+                        locRecordPopupDelete: ThisItem,  
+                        toggleValue:Self.Value,
+                        gallerySelected:ThisItem.IsSelected
+                    })
+                Size: =13.00
+                Width: =92.00
+                X: =161.16
+                ZIndex: =2
+
+            Label2 As label:
+                PaddingRight: =5.00
+                PaddingTop: =5.00
+                Size: =13.00
+                Text: =ThisItem.Employee.DisplayName
+                Width: =150.00
+                X: =264.53
+                ZIndex: =3
+
+            Label2_1 As label:
+                PaddingRight: =5.00
+                PaddingTop: =5.00
+                Size: =13.00
+                Text: =ThisItem.Comments
+                Width: =150.00
+                X: =425.69
+                ZIndex: =4
+
+            Label1_1 As label:
+                PaddingRight: =5.00
+                PaddingTop: =5.00
+                Size: =13.00
+                Text: =ThisItem.ID
+                Width: =150.00
+                X: =586.86
+                ZIndex: =5
+
+    Label5 As label:
+        Height: =115
+        PaddingRight: =5.00
+        PaddingTop: =5.00
+        Size: =13.00
+        Text: ="Text" & locRecordPopupDelete.ID & "Toggle value "& toggleValue& "Current ID " & locRecordPopupDelete.ID
+        Width: =324.01
+        X: =1041.99
+        Y: =74
+        ZIndex: =7
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =7
+
+        Label3 As label:
+            Fill: =RGBA(152, 208, 70, 1)
+            Height: =278
+            PaddingRight: =5.00
+            PaddingTop: =5.00
+            Size: =13.00
+            Text: =
+            Visible: =locShowPopupDelete
+            Width: =766.00
+            X: =490.00
+            Y: =201
+            ZIndex: =2
+
+        Label4 As label:
+            Height: =44
+            PaddingRight: =5.00
+            PaddingTop: =5.00
+            Size: =13.00
+            Text: ="Delete Work Order Item"
+            Visible: =locShowPopupDelete
+            Width: =426.01
+            X: =784.00
+            Y: =275
+            ZIndex: =3
+
+        Button2 As button:
+            OnSelect: |
+                =
+                UpdateContext(
+                        {
+                            locShowPopupDelete: !locShowPopupDelete,
+                            locRecordPopupDelete: Blank()
+                        }
+                    );
+                If(
+                    toggleValue,
+                    Patch(
+                        'User Test',
+                        Gallery2.Selected,
+                        {
+                            Enabled: toggleValue,
+                            Comments: If(
+                                toggleValue,
+                                "tst",
+                                "notst"
+                            )
+                        }
+                    )
+                    ,
+                    Patch(
+                        'User Test',
+                        Gallery2.Selected,
+                        {
+                            Enabled: toggleValue,
+                            Comments: If(
+                                toggleValue,
+                                "tst",
+                                "notst"
+                            )
+                        }
+                    );
+                );
+                
+                Refresh('User Test');
+            PaddingRight: =5.00
+            PaddingTop: =5.00
+            Size: =15.00
+            Text: ="Yes"
+            Visible: =locShowPopupDelete
+            Width: =160.00
+            X: =806.00
+            Y: =368
+            ZIndex: =4
+
+        Button2_1 As button:
+            Height: =38
+            OnSelect: |
+                =UpdateContext(
+                    {
+                        locShowPopupDelete: false,
+                        gallerySelected: false
+                    }
+                );
+                Refresh('User Test');
+            PaddingRight: =5.00
+            PaddingTop: =5.00
+            Size: =15.00
+            Text: ="No"
+            Visible: =locShowPopupDelete
+            Width: =160.00
+            X: =1050.00
+            Y: =370
+            ZIndex: =5
+
+        Icon1 As icon.Cancel:
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({locShowPopupDelete: false})
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Visible: =locShowPopupDelete
+            Width: =64.00
+            X: =1192.00
+            Y: =211
+            ZIndex: =6
+

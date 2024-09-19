@@ -1,0 +1,279 @@
+"Screen3 As screen.'autoLayout_HeaderFooter_ver1.0'":
+    OnVisible: |-
+        =UpdateContext({varOpenDialog:false});
+        Set(vargalleryselected,false);
+
+    ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =2
+
+            Label9 As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                FillPortions: =1
+                Text: ="gallery selected -  " & vargalleryselected & " open dialog - " &varOpenDialog
+                ZIndex: =1
+
+        MainContainer1 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =0
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.Width
+            ZIndex: =3
+
+            Container1 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =RGBA(187, 221, 140, 1)
+                FillPortions: =0
+                Height: =60
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =20
+                PaddingRight: =50
+                ZIndex: =1
+
+                Label6 As label:
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Bold
+                    Text: ="ID"
+                    Width: =100
+                    ZIndex: =1
+
+                Label6_1 As label:
+                    FillPortions: =1
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Bold
+                    LayoutMinWidth: =0
+                    Text: ="Title"
+                    ZIndex: =2
+
+                Label6_2 As label:
+                    FillPortions: =1
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Bold
+                    LayoutMinWidth: =0
+                    Text: ="Enabled"
+                    ZIndex: =3
+
+                Label6_3 As label:
+                    FillPortions: =1
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Bold
+                    LayoutMinWidth: =0
+                    Text: ="Display Name"
+                    ZIndex: =4
+
+                Label6_4 As label:
+                    FillPortions: =1
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Bold
+                    Text: ="Comments"
+                    ZIndex: =5
+
+                Label6_5 As label:
+                    Font: =Font.'Lato Black'
+                    FontWeight: =FontWeight.Bold
+                    Text: =""
+                    Width: =50
+                    ZIndex: =6
+
+            Container1_1 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =0
+                LayoutMinWidth: =0
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =2
+
+                Gallery1 As gallery.variableTemplateHeightGallery:
+                    Items: ='User Test'
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =0
+                    LayoutMinWidth: =0
+                    OnSelect: =Set(vargalleryselected,true);
+                    TemplateSize: =40
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Container4 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =Parent.TemplateHeight
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =20
+                        PaddingRight: =50
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                        Label7 As label:
+                            Text: =ThisItem.ID
+                            Width: =100
+                            ZIndex: =1
+
+                        Label7_1 As label:
+                            FillPortions: =1
+                            LayoutMinWidth: =0
+                            Text: =ThisItem.Title
+                            ZIndex: =2
+
+                        Label7_2 As label:
+                            FillPortions: =1
+                            Text: =ThisItem.Enabled
+                            ZIndex: =3
+
+                        Label7_3 As label:
+                            FillPortions: =1
+                            Text: =ThisItem.Employee.DisplayName
+                            ZIndex: =4
+
+                        Label7_4 As label:
+                            FillPortions: =1
+                            LayoutMinWidth: =100
+                            Text: =ThisItem.Comments
+                            Wrap: =false
+                            ZIndex: =5
+
+                        Toggle1 As toggleSwitch:
+                            Default: =ThisItem.Enabled
+                            LayoutMinHeight: =0
+                            LayoutMinWidth: =50
+                            OnChange: =
+                            OnSelect: |-
+                                =UpdateContext({varOpenDialog:!varOpenDialog});
+                                Set(vargalleryselected,true);
+                            ShowLabel: =false
+                            Width: =100
+                            ZIndex: =6
+
+        FooterContainer1 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =4
+
+            Button4 As button:
+                OnSelect: =Navigate(Screen2)
+                Text: ="Button"
+                ZIndex: =1
+
+    Container5 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Visible: =varOpenDialog && vargalleryselected
+        Width: =Parent.Width
+        ZIndex: =4
+
+        Container7 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Visible: =varOpenDialog && vargalleryselected
+            ZIndex: =1
+
+            Icon2 As icon.Cancel:
+                AlignInContainer: =AlignInContainer.End
+                Fill: =RGBA(232, 244, 217, 1)
+                Height: =40
+                Icon: =Icon.Cancel
+                OnSelect: |-
+                    =UpdateContext({varOpenDialog:false})
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                Width: =40
+                ZIndex: =1
+
+            Label8 As label:
+                Align: =Align.Center
+                AlignInContainer: =AlignInContainer.Stretch
+                Font: =Font.Lato
+                LayoutMinWidth: =0
+                Text: ="Are you sure you want to update the changes?"
+                Width: =Parent.Width
+                ZIndex: =2
+
+            Container8 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                LayoutGap: =20
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingTop: =20
+                Visible: =varOpenDialog && vargalleryselected
+                ZIndex: =3
+
+                No As button:
+                    OnSelect: |-
+                        =UpdateContext({varOpenDialog:false});
+                    Text: ="No"
+                    ZIndex: =1
+
+                Yes As button:
+                    OnSelect: |
+                        =Set(
+                            vargalleryselected,
+                            false
+                        );
+                        UpdateContext({varOpenDialog: false});
+                        Patch(
+                            'User Test',
+                            Gallery1.Selected,
+                            {
+                                Enabled: Toggle1.Value,
+                                Comments: If(
+                                    Toggle1.Value,
+                                    "toggle button changed to true",
+                                    "toggle button changed to false"
+                                )
+                            }
+                        );
+                        
+                        Refresh('User Test');
+                    Text: ="Yes"
+                    ZIndex: =2
+

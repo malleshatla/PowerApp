@@ -1,0 +1,24 @@
+Screen2 As screen:
+
+    Button1 As button:
+        OnSelect: =Set(vargalleryselected,false);Navigate(Screen1)
+        PaddingRight: =5.00
+        PaddingTop: =5.00
+        Size: =15.00
+        Text: ="Button"
+        Width: =160.00
+        X: =40.00
+        Y: =40
+        ZIndex: =1
+
+    Button1_1 As button:
+        OnSelect: =Navigate(Screen3)
+        PaddingRight: =5.00
+        PaddingTop: =5.00
+        Size: =15.00
+        Text: ="Button"
+        Width: =160.00
+        X: =440
+        Y: =64
+        ZIndex: =2
+
