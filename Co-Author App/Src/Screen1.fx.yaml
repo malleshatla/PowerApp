@@ -13,6 +13,7 @@ Screen1 As screen:
     ButtonCanvas1 As Button:
         BasePaletteColor: =RGBA(227, 106, 244, 1)
         DisplayMode: =DisplayMode.Edit
+        FontColor: =RGBA(71, 158, 245, 1)
         Height: =32
         Text: ="Go"
         Width: =96
