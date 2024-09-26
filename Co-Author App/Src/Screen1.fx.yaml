@@ -11,6 +11,7 @@ Screen1 As screen:
         ZIndex: =1
 
     ButtonCanvas1 As Button:
+        BasePaletteColor: =RGBA(227, 106, 244, 1)
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Text: ="Go"
