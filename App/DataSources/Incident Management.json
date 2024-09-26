@@ -1,0 +1,202 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr42e_incidentmanagements",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr42e_incidentmanagement",
+    "Name": "Incident Management",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr42e_activedate": "Active Date",
+      "cr42e_approver": "Approver",
+      "cr42e_assignedto": "Assigned To",
+      "cr42e_categories": "Categories",
+      "cr42e_closeddate": "Closed Date",
+      "cr42e_comments": "Comments",
+      "cr42e_creationdate": "Creation Date",
+      "cr42e_description": "Description",
+      "cr42e_incidentid": "Incident ID",
+      "cr42e_incidentmanagement_AsyncOperations": "System Jobs",
+      "cr42e_incidentmanagement_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr42e_incidentmanagement_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr42e_incidentmanagement_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr42e_incidentmanagement_ProcessSession": "Process Sessions",
+      "cr42e_incidentmanagement_SyncErrors": "Sync Errors",
+      "cr42e_incidentmanagementid": "Incident Management",
+      "cr42e_initiatedby": "Initiated By",
+      "cr42e_priority": "Priority",
+      "cr42e_raisedby": "Raised By",
+      "cr42e_resolutiondate": "Resolution Date",
+      "cr42e_status": "Status (cr42e_status)",
+      "cr42e_time": "Time",
+      "cr42e_type": "Type",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status (statecode)",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Incident Management",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Incident Management (Views)",
+    "Name": "_cr42e_incidentmanagement_views",
+    "RelatedEntityName": "Incident Management",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1221e845-cac2-4a59-b74d-db93ca142922": "Incident Management Advanced Find View",
+      "2929c8c1-5a8b-4b00-9bf5-f44873a63ccd": "Inactive Incident Management",
+      "6fa869ba-3397-452b-8172-6506b6d3d590": "Incident Management Lookup View",
+      "88f40348-2b65-4b7a-a664-9a677a09ac83": "Incident Management Associated View",
+      "d2cfaf43-3479-439f-8b2f-1b81e78deb6b": "Active Incident Management"
+    }
+  },
+  {
+    "DisplayName": "Categories (Incident Management)",
+    "Name": "cr42e_incidentmanagement_cr42e_categories",
+    "OptionSetInfoNameMapping": {
+      "0": "Categories",
+      "1": "Software",
+      "2": "Hardware",
+      "3": "Network",
+      "4": "Email",
+      "5": "Security"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr42e_categories",
+        "OptionSetReferenceEntityName": "Incident Management"
+      }
+    },
+    "OptionSetTypeKey": "MultiSelectPicklistType",
+    "RelatedColumnInvariantName": "cr42e_categories",
+    "RelatedEntityName": "Incident Management",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Priority (Incident Management)",
+    "Name": "cr42e_incidentmanagement_cr42e_priority",
+    "OptionSetInfoNameMapping": {
+      "0": "Priority",
+      "1": "High",
+      "2": "Medium",
+      "3": "Critical",
+      "4": "Low"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr42e_priority",
+        "OptionSetReferenceEntityName": "Incident Management"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr42e_priority",
+    "RelatedEntityName": "Incident Management",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Incident Management)",
+    "Name": "cr42e_incidentmanagement_cr42e_status",
+    "OptionSetInfoNameMapping": {
+      "0": "Status",
+      "1": "New",
+      "2": "In Progress",
+      "3": "Resolved",
+      "4": "Closed"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr42e_status",
+        "OptionSetReferenceEntityName": "Incident Management"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr42e_status",
+    "RelatedEntityName": "Incident Management",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Type (Incident Management)",
+    "Name": "cr42e_incidentmanagement_cr42e_type",
+    "OptionSetInfoNameMapping": {
+      "0": "Type",
+      "1": "Incident",
+      "2": "Request",
+      "3": "Problem",
+      "4": "Change"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr42e_type",
+        "OptionSetReferenceEntityName": "Incident Management"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr42e_type",
+    "RelatedEntityName": "Incident Management",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Incident Management)_1",
+    "Name": "cr42e_incidentmanagement_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Incident Management"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Incident Management",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Incident Management)",
+    "Name": "cr42e_incidentmanagement_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Incident Management"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Incident Management",
+    "Type": "OptionSetInfo"
+  }
+]

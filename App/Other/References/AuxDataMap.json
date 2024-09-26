@@ -1,0 +1,3 @@
+{
+  "AppFromDataMetaDataIdsToEntityNameMappings": "{\"%DataSourceName.AFD%\":\"Incident Management\",\"%DataSourceValue.AFD%\":\"[@'Incident Management']\",\"%SortFieldName.AFD%\":\"\\\"cr42e_approver\\\"\",\"%FilterFieldName.AFD%\":\"cr42e_approver\",\"%PrimaryNameField.AFD%\":\"cr42e_incidentid\",\"%PrimaryNameFieldDisplayName.AFD%\":\"'Incident ID'\",\"%SearchFieldName.AFD%\":\"cr42e_approver,cr42e_assignedto,cr42e_comments\",\"%StartsWithFieldName.AFD%\":\"cr42e_approver\",\"%DeleteConfirmFieldName.AFD%\":\"cr42e_approver\",\"%SortDescending.AFD%\":\"SortDescending1\",\"%CopilotSinglePageScreen.ID%\":\"'Incident Management screen'\",\"%BrowseContainer.ID%\":\"BrowseGallery1\",\"%DetailEditContainer.ID%\":\"EditForm1\"}"
+}
