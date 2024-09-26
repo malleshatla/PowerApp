@@ -1,0 +1,20 @@
+Screen1 As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    TextCanvas1 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Width: =96
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    ButtonCanvas1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Width: =96
+        X: =208
+        Y: =40
+        ZIndex: =2
+
