@@ -13,6 +13,7 @@ Screen1 As screen:
     ButtonCanvas1 As Button:
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        Text: ="Go"
         Width: =96
         X: =208
         Y: =40
