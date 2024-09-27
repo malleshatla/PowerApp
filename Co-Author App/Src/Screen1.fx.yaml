@@ -21,3 +21,13 @@ Screen1 As screen:
         Y: =40
         ZIndex: =2
 
+    ButtonCanvas2 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =ClearCollect(CollBudget,"")
+        Text: ="Get Details"
+        Width: =96
+        X: =622
+        Y: =40
+        ZIndex: =3
+
