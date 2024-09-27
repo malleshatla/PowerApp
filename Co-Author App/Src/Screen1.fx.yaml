@@ -22,6 +22,7 @@ Screen1 As screen:
         ZIndex: =2
 
     ButtonCanvas2 As Button:
+        BasePaletteColor: =RGBA(8, 222, 8, 1)
         DisplayMode: =DisplayMode.Edit
         Height: =32
         OnSelect: =ClearCollect(CollBudget,"")
