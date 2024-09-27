@@ -11,7 +11,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/27/2024 08:42:43",
+  "HeaderLastSavedDateTimeUTC": "09/27/2024 08:43:39",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": true,
@@ -22,8 +22,8 @@
   "OrderDataSource": {},
   "OrderGroupControls": {},
   "OrderPcfTemplate": {
-    "PowerApps_CoreControls_ButtonCanvas": 0,
-    "PowerApps_CoreControls_TextCanvas": 1
+    "PowerApps_CoreControls_ButtonCanvas": 1,
+    "PowerApps_CoreControls_TextCanvas": 0
   },
   "OrderTemplate": {},
   "OrderXMLTemplate": {},
@@ -82,11 +82,11 @@
   },
   "PublishOrderIndices": {
     "App": 0,
-    "ButtonCanvas1": 5,
-    "ButtonCanvas2": 0,
+    "ButtonCanvas1": 1,
+    "ButtonCanvas2": 2,
     "Host": 0,
     "Screen1": 3,
-    "TextCanvas1": 4
+    "TextCanvas1": 0
   },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
